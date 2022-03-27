@@ -12,7 +12,7 @@ $password_confirmation = trim(htmlspecialchars($_POST["password_confirmation"]))
 
  $len = strlen($password);
 
- 
+
 
 $errors = array();
 
@@ -32,7 +32,7 @@ $errors = array();
 	$errors[] = 'Пароли не совпадают!';
  }elseif($len <=3){
  	$errors[] = 'короткий пароль!';
- }elseif($count=$user->rowCount() > 0 ){
+ }elseif($user->rowCount() > 0 ){
  	$errors[] = 'Пользователь с таким емайлом уже зарегестрирован!';
  }
 
